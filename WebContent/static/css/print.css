@@ -1,0 +1,72 @@
+/* -----------------------------------------------------------------------
+
+
+ Blueprint CSS Framework 1.0.1
+ http://blueprintcss.org
+
+   * Copyright (c) 2007-Present. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* print.css */
+ h1 {
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-size: 15px;
+}
+table{
+	margin-top:50px;
+	height:300px;
+	width:100%;
+	border-collapse:collapse;
+	background-color:#F2F4F4;
+	text-align: center;
+	cellspacing:0;
+	font-size: 14px;
+	border-color:#C1DAD7;
+	page-break-before: always;
+}
+table caption{
+	height: 30px;
+	font-size: 16px;
+}
+table th{
+	background-color:#CAE8EA;
+	color:  #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	font-size: 14px;
+}
+table .trWidth{
+	height: 50px;
+}
+table td {
+	    border-right: 1px solid #C1DAD7;
+	    border-bottom: 1px solid #C1DAD7;
+	    background: #fff;
+	    font-size:11px;
+	    padding: 6px 6px 6px 12px;
+	    color: #4f6b72;
+	    font-size: 14px;
+}
+p {
+	font-size: 12px;
+	line-height: 150%;
+	text-indent: 0.7cm;
+}
+.sonp {
+	font-size: 12px;
+	line-height: 150%;
+	text-indent: 0cm;
+	font-weight: bold;
+}
+img {
+   max-width: 100% !important;
+   page-break-inside: avoid;
+}

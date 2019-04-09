@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+	<link rel="stylesheet" href="../css/bottom.css">
+	<script src="../js/jquery-3.1.0.min.js"></script>
+	<script>
+		 function allcheck() {
+		              var nn = $("#allboxs").is(":checked"); //判断th中的checkbox是否被选中，如果被选中则nn为true，反之为false
+		                  if(nn == true) {
+		                      var namebox = $("input[name^='boxs']");  //获取name值为boxs的所有input
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=true;    //js操作选中checkbox
+		                      }
+		                  }
+		                  if(nn == false) {
+		                      var namebox = $("input[name^='boxs']");
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=false;
+		                      }
+		                  }
+		              }
+	</script>
+	<link rel="stylesheet" href="../css/bottom.css">
+	<link rel="stylesheet" href="../css/table.css">
+       <meta charset="utf-8">
+   </head>
+   <body>
+     <tr>
+   
+      <TR>
+        <th width="10%" align="center"><STRONG>修整状态</STRONG></th>
+        <td width="20%"><select>
+		  <option>全部</option>
+		  <option>全面修</option>
+		  <option>二级修</option>
+		  <option>一级修</option>
+		  <option>在线修</option>
+		  <option>良好车</option>
+        </select></td>
+        </TR>
+   </td>
+  </tr>
+  <a href="#" class="GreenButtom"><img class="center" src="../images/find.png" />查询</a><br>
+  <div id="container1" style="width: 220px;height: 200px;float: left"></div>
+  <div id="container" style="width: 300px;height: 200px;float: left"></div><br>
+<table id="customers">
+<tr>
+<th>序号</th>
+<th>车次</th>
+<th>车辆型号</th>
+<th>建议修程</th>
+<th>待修车辆数</th>
+<th>最小剩余寿命</th>
+<th>发布时间</th>
+<th>当前状态</th>
+<th>当前位置</th>
+<th>所属分公司</th>
+<th>诊断决策报告</th>
+<th><input id="allboxs" onclick="allcheck()" type="checkbox"/></th>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/redball.png" /> 全面修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/redball.png" /> 严重警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/blueball.png" /> 二级修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/oraball.png" /> 主要警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/lightgreen.png" /> 一级修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/yellowball.png" /> 轻微警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>02</td>
+<td>S803</td>
+<td>C70A</td>
+<td><img src="../images/imgs/yellowball.png" /> 在线修</td>
+<td>5</td>
+<td>9</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/lanball.png" /> 警告告警</td>
+<td>榆林</td>
+<td>陕西分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>03</td>
+<td>S804</td>
+<td>C64K</td>
+<td><img src="../images/imgs/dianball.png" /> 良好车</td>
+<td>7</td>
+<td>8</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/dianball.png" /> 车况良好</td>
+<td>肃宁</td>
+<td>肃宁分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+</table>
+	<script type="text/javascript" src="echarts.min.js"></script>
+<script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	title:{
+		text:"在线货车总数"
+	},
+    xAxis: {
+        type: 'category',
+        data: ['C80', 'C80B', 'C70A', 'C64K', 'KM98']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [100, 80, 80, 80, 60],
+        type: 'bar'
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+</script>
+ <script type="text/javascript">
+function pie(container,txt,dat){
+
+	var dom = document.getElementById(container);
+	var myChart = echarts.init(dom);
+	var app = {};
+	option = null;
+	app.title = '环形图';
+	
+	option = {
+		title:{
+			text:txt
+		},
+		tooltip: {
+			trigger: 'item',
+			formatter: "{a} <br/>{b}: {c} ({d}%)"
+		},
+		series: [
+			{
+				name:txt,
+				type:'pie',
+				radius: ['20%', '40%'],
+				data:dat
+			}
+		]
+	};
+	;
+	if (option && typeof option === "object") {
+		myChart.setOption(option, true);
+	}
+};
+data1=[	{value:6, name:'全面修',itemStyle:{normal:{color:'#FF3B30'}}},
+		{value:10, name:'二级修',itemStyle:{normal:{color:'#9013FE'}}},
+		{value:8, name:'一级修',itemStyle:{normal:{color:'#FF9500'}}},
+		{value:8, name:'在线修',itemStyle:{normal:{color:'#FFCC00'}}},
+		{value:8, name:'正常',itemStyle:{normal:{color:'#4CD964'}}}];
+pie("container1","货车修理状态",data1);
+</script>
+	</body>
+	</html>

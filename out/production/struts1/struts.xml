@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.action.excludePattern" value="/static/.*?" />
+	<constant name="struts.convention.action.mapallmatches" value="true" />
+	<constant name="struts.multipart.maxSize" value="1000000000"></constant>
+	<!-- struts2.3.16之后默认不允许用action！method的方法，更改如下： -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="json-default">
+
+		<action name="train" class="com.Action.TrainAction" method="query">
+			<result name="train">fir_train.jsp</result>
+		</action>
+
+		<action name="car" class="com.Action.CarAction" method="query">
+			<result name="car">fir_car.jsp</result>
+		</action>
+
+		<action name="query" class="com.Action.UserAction" method="query">
+			<result name="show">query.jsp</result>
+		</action>
+
+		<action name="cheliebaogao" class="com.Action.CheliebaogaoAction"
+			method="query">
+			<result name="showCheliebaogao">cheliebaogao.jsp</result>
+		</action>
+
+		<action name="table1" class="com.Action.BarAction" method="execute">
+			<result type="json">
+				<param name="root">barlist</param>
+			</result>
+		</action>
+
+		<action name="baseInfo" class="com.Action.BaseInfoAction"
+			method="query">
+			<result name="showbaseInfos">cheliebaogao.jsp</result>
+		</action>
+
+		<action name="TrainSorcetable" class="com.Action.TrainSorceAction"
+			method="execute">
+			<result type="json">
+				<param name="root">TrainSorcelist</param>
+			</result>
+		</action>
+		<action name="cartechq" class="com.Action.CartechAction"
+			method="query">
+			<result name="cartechqr">cartech.jsp</result>
+		</action>
+		
+		<action name="cartechc" class="com.Action.CarsysAction"
+			method="quu">
+			<result name="carsysqr">carsys.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<action name="cartechs" class="com.Action.CartechAction"
+			method="submit">
+			<result name="cartechsr" type="json"></result>
+		</action>
+		
+<!-- 		<action name="carsysq" class="com.Action.CarsysAction" -->
+<!-- 			method="query"> -->
+<!-- 			<result name="carsysqr">carsys.jsp</result> -->
+<!-- 		</action> -->
+		<action name="carsyss" class="com.Action.CarsysAction"
+			method="submit">
+			<result name="carsyssr" type="json"></result>
+		</action>
+		
+		<action name="traintechq" class="com.Action.TraintechAction"
+			method="query">
+			<result name="traintechqr">traintech.jsp</result>
+		</action>
+		<action name="traintechs" class="com.Action.TraintechAction"
+			method="submit">
+			<result name="traintechsr" type="json"></result>
+		</action>
+
+	</package>
+</struts>

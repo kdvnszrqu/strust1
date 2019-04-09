@@ -1,0 +1,58 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>JS+DIV模拟SELECT并且把无效选项设置为灰色</title> 
+<script type="text/javascript"> 
+$=function(id){ 
+return document.getElementById(id); 
+} 
+var flag=false; 
+function shlist(){ 
+$("selectList").style.display=$("selectList").style.display=="block"?"none":"block"; 
+} 
+function changesever(ts){ 
+document.getElementById("t_selected").innerHTML="---"+ts.innerHTML+"---"; 
+shlist(); 
+} 
+function setFlag(val){ 
+flag=val; 
+} 
+function hideList(){ 
+if(!flag)document.getElementById("selectList").style.display="none"; 
+} 
+setCss=function(p){ 
+p.style.cursor='hand'; 
+p.style.backgroundColor='#BABABA'; 
+} 
+removeCss=function(p){ 
+p.style.backgroundColor='white'; 
+} 
+</script> 
+
+<style type="text/css"> 
+#contain{ width:200px; height:18px; } 
+#t_selected{ 
+background-image:url(http://bbs.17gb.com/images/default/arrow_down.gif) !important; 
+background-position:100% 50% !important; 
+background-repeat:no-repeat !important; 
+font-size:12px; 
+border:#DFDFDF 1px solid; 
+} 
+#selectList{border:#DFDFDF 1px solid; font-size:12px; width:200px;text-align:left; display:none;} 
+#selectList span{width:200px} 
+</style> 
+</head> 
+<body> 
+<div id="contain"> 
+<div id="t_selected" onclick="shlist();" onmouseover="setFlag(true);" onmouseout="setFlag(false);" onblur="hideList()">---请选---</div> 
+<div id="selectList" onmouseover="setFlag(true);" onmouseout="setFlag(false);"> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">餐饮美食</span><br/> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">休闲娱乐</span><br/> 
+<span style='color:rgb(136, 136, 136)'>宾馆酒店</span><br/> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">购物指南</span><br/> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">运动场馆</span><br/> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">生活便利</span><br/> 
+<span onclick="changesever(this);" onmouseover="setCss(this)" onmouseout="removeCss(this);">出行旅游</span><br/> 
+</div> 
+</div> 
+</body>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+		
+	<script src="../js/jquery-3.1.0.min.js"></script>
+	 <script>
+		 function allcheck() {
+		              var nn = $("#allboxs").is(":checked"); //判断th中的checkbox是否被选中，如果被选中则nn为true，反之为false
+		                  if(nn == true) {
+		                      var namebox = $("input[name^='boxs']");  //获取name值为boxs的所有input
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=true;    //js操作选中checkbox
+		                      }
+		                  }
+		                  if(nn == false) {
+		                      var namebox = $("input[name^='boxs']");
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=false;
+		                      }
+		                  }
+		              }
+	 </script>
+	 <link rel="stylesheet" href="../css/bottom.css">
+   <link rel="stylesheet" href="../css/table.css">
+       <meta charset="utf-8">
+   </head>
+   <body>
+     <tr>
+   
+      <TR>
+        <th width="10%" align="center"><STRONG>车型</STRONG></th>
+        <td width="20%" class="BGCgray"><select name="select2" id="select2">
+          <option>全部</option>
+          <option>C80</option>
+          <option>C64K</option>
+          <option>C70A</option>
+        </select></td>
+        <!-- <th width="10%" align="center"><BUTTON style="HEIGHT:25px" onClick="javascript:if (confirm('查询数据？')) location.href='#';else return;"><img src="../../images/btn_search.gif" width="16" height="16" align="absmiddle"> 查询</BUTTON></th> -->
+        </TR>
+   </td>
+  </tr>
+  <input id="autocomplete" style="width:200px;">
+  <a href="#" class="GreenButtom"><img class="center" src="../images/find.png" />查询</a>
+	<a href="#" class="newButtom"><img class="center" src="../images/add.png" />新增</a>
+	<a href="#" class="deleteButtom"><img class="center" src="../images/delete.png" />删除</a><br>
+	<table id="customers">
+<tr>
+<th>序号</th>
+<th>大部件名</th>
+<th>参数值η</th>
+<th>设定时间</th>
+<th>设定人</th>
+<th>验证</th>
+<th>删除选择</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>车体</td>
+<td>35<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>底架</td>
+<td>15<img src="../images/修改.png" /></td>
+<td>2018/05/21</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>转向架</td>
+<td>55<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>基础制动装置</td>
+<td>24<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+<tr>
+<td>5</td>
+<td>空气制动装置</td>
+<td>15<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+<tr>
+<td>6</td>
+<td>制动阀内部结构</td>
+<td>5<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+<tr>
+<td>7</td>
+<td>钩缓装置</td>
+<td>40<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+<tr>
+<td>8</td>
+<td>轮轴</td>
+<td>30<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+</table>
+
+	</body>
+	</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 400px; margin: 0">
+       <div id="container" style="width: 300px;height: 200px;float: left"></div>
+	   <div id="container1" style="width: 200px;height: 200px;float: left"></div>
+	   <div id="container2" style="width: 200px;height: 200px;float: left"></div>
+	   <div id="container3" style="width: 200px;height: 200px;float: left"></div>
+	   <div id="container4" style="width: 200px;height: 200px;float: left"></div>
+	   <iframe display="inline"  height="240px" width="50%" src="../../map.html" style="border-width: 0; margin: 0"></iframe>
+	   <div id="container5" style="width: 500px;height: 240px;float: right"></div>
+       <script type="text/javascript" src="echarts.min.js"></script>
+       <script type="text/javascript" src="echarts-gl.min.js"></script>
+       <script type="text/javascript" src="ecStat.min.js"></script>
+       <script type="text/javascript" src="dataTool.min.js"></script>
+       <script type="text/javascript" src="china.js"></script>
+       <script type="text/javascript" src="world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="bmap.min.js"></script>
+       <script type="text/javascript" src="simplex.js"></script>
+	   <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	title:{
+		text:"在线货车总数"
+	},
+    xAxis: {
+        type: 'category',
+        data: ['C80', 'C80B', 'C70A', 'C64K', 'KM98']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [100, 80, 80, 80, 60],
+        type: 'bar'
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+</script>
+<script type="text/javascript">
+function pie(container,txt,dat){
+
+	var dom = document.getElementById(container);
+	var myChart = echarts.init(dom);
+	var app = {};
+	option = null;
+	app.title = '环形图';
+	
+	option = {
+		title:{
+			text:txt
+		},
+		tooltip: {
+			trigger: 'item',
+			formatter: "{a} <br/>{b}: {c} ({d}%)"
+		},
+		series: [
+			{
+				name:txt,
+				type:'pie',
+				radius: ['20%', '40%'],
+				data:dat
+			}
+		]
+	};
+	;
+	if (option && typeof option === "object") {
+		myChart.setOption(option, true);
+	}
+};
+data1=[	{value:6, name:'KM98'},
+		{value:10, name:'C80'},
+		{value:8, name:'C70A'},
+		{value:8, name:'C64K'},
+		{value:8, name:'C80B'}];
+pie("container1","在线修货车总数",data1);
+data2=[{value:3, name:'KM98'},
+       {value:5, name:'C80'},
+       {value:4, name:'C70A'},
+       {value:4, name:'C64K'},
+       {value:4, name:'C80B'}];
+pie("container2","整备修（1）总数",data2);
+data3=[         {value:2, name:'KM98'},
+                {value:3, name:'C80'},
+                {value:1, name:'C70A'},
+                {value:2, name:'C64K'},
+                {value:2, name:'C80B'}];
+pie("container3","整备修（2）总数",data3);
+data4=[         {value:1, name:'KM98'},
+                {value:2, name:'C80'},
+                {value:0, name:'C70A'},
+                {value:1, name:'C64K'},
+                {value:1, name:'C80B'}];
+pie("container4","全面修货车总数",data4);
+</script>
+<script type="text/javascript">
+var dom = document.getElementById("container5");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	title:{
+		text:"待修车量"
+	},
+	grid: {
+        left: '10%',
+        right: '4%',
+        bottom: '3%',
+		top: '20%',
+    }, 
+    xAxis: {
+        type: 'value',
+		position: 'top'
+    },
+	yAxis: {
+        type: 'category',
+        data: ['S812', 'S811', 'S810', 'S809', 'S808','S807', 'S806', 'S805','S804','S803','S802']
+    },
+    series: [{
+        data: [3,4,5,6,7,8,9,10,11,12,15],
+        type: 'bar'
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+</script>
+   </body>
+</html>

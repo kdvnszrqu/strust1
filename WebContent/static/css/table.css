@@ -1,0 +1,116 @@
+html, body {
+	margin: 0;
+	padding: 0
+}
+
+a:focus {
+	outline: none;
+}
+/* 通用表格显示 */
+
+
+table
+  {
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  width:100%;
+  border-collapse:collapse;
+	font-size:14px;
+	color:#333333;
+  text-align:center;
+  }
+
+table td, table th 
+  {
+		height:25px;
+  font-size:1em;
+  border:1px solid #aed0ea;
+  padding:3px 7px 2px 7px;
+  }
+table td img
+  {
+	  
+	   height:20px;
+	   width=20px;
+  }
+table th 
+  {
+  font-size:14px;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color:#e4effa;
+  color:#333333;
+  }
+table tbody > tr:nth-child(odd)
+{
+background:#f6f4fc;
+}
+table tbody > tr:nth-child(even)
+{
+background:#ffffff;
+}
+table tbody > tr>td:nth-child(1)
+{
+	background:#e2ebf6;
+}
+
+.datatable {
+	width: 100%;
+	border-style: none;
+	background-color: #fff;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.datatable th, .datatable td {
+	padding: 5px;
+	line-height: 30px
+}
+
+.datatable thead th {
+	background-color: #eee;
+	margin: 0;
+	text-align: left;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	font-weight: 500
+}
+
+.datatable tbody td {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	table-layout: fixed;
+	word-break: break-all;
+	font-weight: 400
+}
+
+.datatable tbody tr.evenrow td {
+	background-color: #f4f4f4;
+}
+
+.datatable tfoot td {
+	background-color: #fafafa;
+	text-align: right;
+	border-bottom: 1px solid #cfcfcf;
+}
+/*表格分页列表*/
+.datatable td.paging a {
+	border: 1px solid #eee;
+	color: #444;
+	margin: 4px;
+	padding: 2px 7px;
+	text-decoration: none;
+	text-align: center;
+}
+/*表格分页当前页*/
+.datatable td.paging a.current {
+	background: #eee;
+	border: 1px solid #CFCFCF;
+	color: #444;
+	font-weight: bold;
+}
+
+.datatable td.paging a.current {
+	border: 0;
+	cursor: auto;
+	background: none
+}

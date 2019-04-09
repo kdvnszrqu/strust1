@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js模拟select</title>
+<style>
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,p{margin:0;padding:0; font-family:"微软雅黑", Microsoft Yahei, Arial, Helvetica, sans-serif;}
+ol,ul{list-style:none;}
+.container{ padding-top:100px; margin-left:100px;}
+ 
+/**
+* 模拟select
+**/
+.select-box { position: relative; float: left; margin-right: 8px; }
+.select-city .select-header { width: 88px; height: 36px; border: 1px solid #c1c1c1; padding-right: 26px; background: url(img/arrow.png) no-repeat #f9f9f9; background-position: 95px 15px; line-height: 36px; text-indent: 14px; font-size: 16px; color: #a9a9a9; cursor: pointer; overflow: hidden; }
+.select-city .select-arrow { background-position: 95px -9px; }
+.select-city .select-content { border-left: 1px solid #c1c1c1; border-right: 1px solid #c1c1c1; position: absolute; top: 38px; left: 0; z-index: 99; display: none; background-color: #f9f9f9; }
+.select-city .select-content li { width: 114px; height: 36px; margin: 0; border-bottom: 1px solid #c1c1c1; line-height: 36px; text-indent: 14px; background-color: #f9f9f9; font-size: 16px; color: #a9a9a9; cursor: pointer; }
+.select-bank .select-header { width: 272px; height: 36px; border: 1px solid #c1c1c1; padding-right: 26px; background: url(img/arrow.png) no-repeat #f9f9f9; background-position: 279px 15px; line-height: 36px; text-indent: 14px; font-size: 16px; color: #a9a9a9; cursor: pointer; overflow: hidden; }
+.select-bank .select-arrow { background-position: 279px -9px; }
+.select-bank .select-content { border-left: 1px solid #c1c1c1; border-right: 1px solid #c1c1c1; position: absolute; top: 38px; left: 0; z-index: 99; display: none; background-color: #f9f9f9; }
+.select-bank .select-content li { width: 298px; height: 36px; margin: 0; border-bottom: 1px solid #c1c1c1; line-height: 36px; text-indent: 14px; background-color: #f9f9f9; font-size: 16px; color: #a9a9a9; cursor: pointer; }
+
+</style>
+</head>
+ 
+<body>
+<div class="container">
+  <div class="select-box select-city">
+    <div class="select-header"> 省份 </div>
+    <ul class="select-content">
+      <li>北京</li>
+      <li>河北省</li>
+      <li>山东省</li>
+    </ul>
+  </div>
+  <div class="select-box select-city">
+    <div class="select-header"> 城市 </div>
+    <ul class="select-content">
+      <li>北京</li>
+    </ul>
+  </div>
+  <div class="select-box select-city">
+    <div class="select-header"> 区/县 </div>
+    <ul class="select-content">
+      <li>海淀区</li>
+      <li>朝阳区</li>
+      <li>东城区</li>
+    </ul>
+  </div>
+</div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	/**
+     * 模拟select
+     **/
+    $(".select-header").click(function(){
+        $(this).parent().siblings(".select-box").find(".select-content").slideUp("fast");
+        if($(this).siblings(".select-content").is(":hidden")){
+            $(this).addClass("select-arrow");
+            $(this).siblings(".select-content").slideDown("fast");
+            var evt =  new Object;
+            if ( typeof(window.event) == "undefined" ){//如果是火狐浏览器
+                evt = arguments.callee.caller.arguments[0];
+            }else{
+                evt = event || window.event;
+            }
+            evt.cancelBubble = true;
+        }else{
+            $(this).removeClass("select-arrow");
+            $(this).siblings(".select-content").slideUp("fast");
+			//去除事件冒泡
+            var evt =  new Object;
+            if ( typeof(window.event) == "undefined" ){//如果是火狐浏览器
+                evt = arguments.callee.caller.arguments[0];
+            }else{
+                evt = event || window.event;
+            }
+            evt.cancelBubble = true;
+        }
+    });
+	$(document).click(function(){
+        $(".select-header").removeClass("select-arrow");
+        $(".select-content").slideUp("fast");
+    });
+    $(".select-content li").on("click",function(){
+        $(this).parent().siblings(".select-header").removeClass("select-arrow");
+        $(this).parent().siblings(".select-header").text($(this).text()).end().slideUp("fast");
+    });
+    $(".select-content li").hover(function(){
+        $(this).css("background-color","#cfcfcf");
+    },function(){
+        $(this).css("background-color","#fff");
+    });
+});
+</script>
+</html>

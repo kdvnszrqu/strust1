@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="225,10" size="525,455">
+    <action name="query" location="66,58" size="150,41">
+      <result name="show">
+        <resourceEdge source="show" routing="0" target="query.jsp" />
+      </result>
+    </action>
+    <action name="cheliebaogao" location="66,163" size="150,41">
+      <result name="showCheliebaogao">
+        <resourceEdge source="showCheliebaogao" routing="0" target="cheliebaogao.jsp" />
+      </result>
+    </action>
+    <action name="table1" location="66,268" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="baseInfo" location="66,373" size="150,41">
+      <result name="showbaseInfos">
+        <resourceEdge source="showbaseInfos" routing="0" target="cheliebaogao.jsp" />
+      </result>
+    </action>
+    <action name="TrainSorcetable" location="311,373" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="query.jsp" path="query.jsp" location="10,52" size="150,55" />
+  <webResource name="cheliebaogao.jsp" path="cheliebaogao.jsp" location="10,157" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,17 @@
+#tian{position:relative;width: 100%; height:500px; z-index: 1}
+#content{position:absolute; top:10px;left:20px;width: 150px;height: 180px;background-color:white ;z-index: 2;border: 1px solid yellow;
+    border-radius: 10px;
+}
+#ctsinr{position:absolute; top:10px;left:20px;width: 110px;height: 110px;background-color:white ;z-index: 2;border: 1px solid yellow;
+    border-radius: 10px;
+}
+#LTE{font-family: Arial; margin: 5px 5px; text-indent: 6px}
+#text{text-indent: 14px; font-size: 15px; color: #0000FF; margin: 2px 2px;}
+.ball{margin: 2px 2px; font-family: Arial, sans-serif;text-indent: 10px}
+.color_ball{width:10px;height: 10px; padding-right: 10px; padding-left: 20px }
+#last{padding:0px 100px 6px 8px;font-family: "Abyssinica SIL"; font-size: 15px}
+#form{margin-left: 20px; width: 100%;}
+#selectConditionform1{width:100%}
+.inputbord{border: solid 1px; width:30%; float:left; margin-left: 0px;padding-right: 0%;}
+.span{float: left;}
+.bord{width:32% ; margin-top:1%;}

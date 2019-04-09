@@ -1,0 +1,85 @@
+@charset "utf-8";
+.GreenButtom {
+	background-color:#5cb85c;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4cae4c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	font-size:12px;
+	text-align:center;
+	width: 59px;
+	height:30px;
+	text-decoration:none;
+	margin: 2px 1px;
+}
+.GreenButtom:hover {
+	background-color:#5dc425;
+}
+img.center {
+margin: 8px 1px;
+vertical-align:middle;
+}
+.saveButtom{
+	background-color:#5cb85c;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4cae4c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	font-size:12px;
+	text-align:center;
+	width: 33px;
+	height:30px;
+	text-decoration:none;
+	margin: 2px 1px;
+}
+.saveButtom:hover {
+	background-color:#5dc425;
+}
+.newButtom {
+	background-color:#5bc0de;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #46b8da;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	font-size:12px;
+	text-align:center;
+	width: 59px;
+	height:30px;
+	text-decoration:none;
+	margin: 2px 1px;
+}
+.newButtom:hover {
+	background-color:#5dc425;
+}
+.deleteButtom {
+	background-color:#f0ad4e;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eea236;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	font-size:12px;
+	text-align:center;
+	width: 59px;
+	height:30px;
+	text-decoration:none;
+	margin: 2px 1px;
+}
+.deleteButtom:hover {
+	background-color:#5dc425;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+		
+	<script src="../js/jquery-3.1.0.min.js"></script>
+	 <script>
+		 function allcheck() {
+		              var nn = $("#allboxs").is(":checked"); //判断th中的checkbox是否被选中，如果被选中则nn为true，反之为false
+		                  if(nn == true) {
+		                      var namebox = $("input[name^='boxs']");  //获取name值为boxs的所有input
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=true;    //js操作选中checkbox
+		                      }
+		                  }
+		                  if(nn == false) {
+		                      var namebox = $("input[name^='boxs']");
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=false;
+		                      }
+		                  }
+		              }
+	 </script>
+	 <link rel="stylesheet" href="../css/bottom.css">
+   <link rel="stylesheet" href="../css/table.css">
+       <meta charset="utf-8">
+   </head>
+   <body>
+     <tr>
+   
+      <TR>
+        <th width="10%" align="center"><STRONG>车型</STRONG></th>
+        <td width="20%" class="BGCgray"><select name="select2" id="select2">
+          <option>C80</option>
+          <option>C80</option>
+          <option>C64K</option>
+          <option>C70A</option>
+        </select></td>
+		<th width="10%" align="center"><STRONG>分类</STRONG></th>
+        <td width="20%" class="BGCgray"><select name="select2" id="select2">
+          <option>零部件参数</option>
+          <option>C80</option>
+          <option>C64K</option>
+          <option>C70A</option>
+        </select></td>
+		<th width="10%" align="center"><STRONG>修改项</STRONG></th>
+        <td width="20%" class="BGCgray"><select name="select2" id="select2">
+          <option>危害度</option>
+          <option>C80</option>
+          <option>C64K</option>
+          <option>C70A</option>
+        </select></td>
+        </TR>
+   </td>
+  </tr>
+  <input id="autocomplete" style="width:200px;">
+  <a href="#" class="GreenButtom"><img class="center" src="../images/find.png" />查询</a>
+	<a href="#" class="newButtom"><img class="center" src="../images/add.png" />新增</a>
+	<a href="#" class="deleteButtom"><img class="center" src="../images/delete.png" />删除</a><br>
+	<table id="customers">
+<tr>
+<th>序号</th>
+<th>危害度</th>
+<th>分数</th>
+<th>设定时间</th>
+<th>设定人</th>
+<th>验证</th>
+<th>删除选择</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>强</td>
+<td>80<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>较强</td>
+<td>60<img src="../images/修改.png" /></td>
+<td>2018/05/21</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>中等</td>
+<td>40<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>轻度</td>
+<td>20<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>无</td>
+<td>0<img src="../images/修改.png" /></td>
+<td>2018/05/23</td>
+<td>李泳</td>
+<td><img src="../images/验证.png" /></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+
+</table>
+
+	</body>
+	</html>

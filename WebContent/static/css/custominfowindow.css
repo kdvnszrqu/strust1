@@ -1,0 +1,40 @@
+	#mapDiv{
+		height:600px;
+		margin: 4px;
+		border: 1px solid #ccc;
+		float:left;
+	}
+	.opt_station_hover{
+		background: rgb(77,103,130);
+		font-size: 10px;
+		width: 170px;
+		height: 120px;
+		border-radius: 5px;
+	}
+	.opt_station_hover_ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		line-height: 23px;
+		text-indent: 4px;
+		color: white;
+		position: relative;
+	}
+	.opt_station_hover_ul li{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		height: 23px;
+	}
+	.opt_station_hover img{
+		position: absolute;
+		left: 50%;
+		margin-left: -5px;
+	}
+	.opt_li_left{
+		width: 65px;
+		display: bolck;
+		float: left;
+		text-align: right;
+	}

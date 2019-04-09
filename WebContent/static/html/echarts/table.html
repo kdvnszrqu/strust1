@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+		
+	<script src="../js/jquery-3.1.0.min.js"></script>
+	 <script>
+		 function allcheck() {
+		              var nn = $("#allboxs").is(":checked"); //判断th中的checkbox是否被选中，如果被选中则nn为true，反之为false
+		                  if(nn == true) {
+		                      var namebox = $("input[name^='boxs']");  //获取name值为boxs的所有input
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=true;    //js操作选中checkbox
+		                      }
+		                  }
+		                  if(nn == false) {
+		                      var namebox = $("input[name^='boxs']");
+		                      for(i = 0; i < namebox.length; i++) {
+		                          namebox[i].checked=false;
+		                      }
+		                  }
+		              }
+	 </script>
+	 <link rel="stylesheet" href="../css/bottom.css">
+   <link rel="stylesheet" href="../css/table.css">
+       <meta charset="utf-8">
+   </head>
+   <body>
+     <tr>
+   
+      <TR>
+        <th width="10%" align="center"><STRONG>修整状态</STRONG></th>
+        <td width="20%" class="BGCgray"><select name="select2" id="select2">
+          <option>全部</option>
+          <option>全面修</option>
+          <option>二级修</option>
+          <option>一级修</option>
+          <option>在线修</option>
+          <option>正常</option>
+        </select></td>
+        <!-- <th width="10%" align="center"><BUTTON style="HEIGHT:25px" onClick="javascript:if (confirm('查询数据？')) location.href='#';else return;"><img src="../../images/btn_search.gif" width="16" height="16" align="absmiddle"> 查询</BUTTON></th> -->
+        </TR>
+   </td>
+  </tr>
+  <a href="#" class="GreenButtom"><img class="center" src="../images/find.png" />查询</a>
+	<a href="#" class="saveButtom"><img class="center" src="../images/save.png" /></a>
+	<a href="#" class="newButtom"><img class="center" src="../images/add.png" />新增</a>
+	<a href="#" class="newButtom"><img class="center" src="../images/svg_find.png" />查看</a>
+	<a href="#" class="deleteButtom"><img class="center" src="../images/delete.png" />删除</a><br>
+	<table id="customers">
+<tr>
+<th>序号</th>
+<th>车次</th>
+<th>车辆型号</th>
+<th>建议修程</th>
+<th>待修车辆数</th>
+<th>最小剩余寿命</th>
+<th>发布时间</th>
+<th>当前状态</th>
+<th>当前位置</th>
+<th>所属分公司</th>
+<th>诊断决策报告</th>
+<th><input id="allboxs" onclick="allcheck()" type="checkbox"/></th>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/redball.png" /> 全面修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/redball.png" /> 严重警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/blueball.png" /> 二级修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/oraball.png" /> 主要警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>01</td>
+<td>S802</td>
+<td>C80</td>
+<td><img src="../images/imgs/lightgreen.png" /> 一级修</td>
+<td>3</td>
+<td>10</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/yellowball.png" /> 轻微警告</td>
+<td>包头</td>
+<td>包头分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>02</td>
+<td>S803</td>
+<td>C70A</td>
+<td><img src="../images/imgs/yellowball.png" /> 在线修</td>
+<td>5</td>
+<td>9</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/lanball.png" /> 警告告警</td>
+<td>榆林</td>
+<td>陕西分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+<tr>
+<td>03</td>
+<td>S804</td>
+<td>C64K</td>
+<td><img src="../images/imgs/dianball.png" /> 良好车</td>
+<td>7</td>
+<td>8</td>
+<td>2017年09月08日</td>
+<td><img src="../images/imgs/dianball.png" /> 车况良好</td>
+<td>肃宁</td>
+<td>肃宁分公司</td>
+<td><a href="#"><img src="../images/f01.png" /></a></td>
+<td><input  name="boxs" type="checkbox"/></td>
+</tr>
+
+</table>
+
+	</body>
+	</html>
